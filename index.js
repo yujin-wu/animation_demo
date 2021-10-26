@@ -57,7 +57,7 @@ const handleBoxAnimationStart = () => {
 const car = {
     x: 0,
     y: 0,
-    direction: "left"
+    direction: "right"
 }
 
 const carElement = document.getElementById("car");
