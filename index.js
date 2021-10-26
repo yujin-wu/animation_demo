@@ -23,6 +23,8 @@ const handleClearInterval = () => {
     }
 }
 
+// TIMER APP
+
 let secondsRemaining = 10;
 const timerDisplay = document.getElementById("time-heading");
 
@@ -41,11 +43,30 @@ const handleTimerStart = () => {
 const character = document.getElementById("character");
 
 const handleBoxAnimationStart = () => {
-    setInterval(() => {
+    setTimeout(() => {
         character.style.left = `${Math.random() * 250}px`
         character.style.top = `${Math.random() * 250}px`;
-        character.style.transform = `rotate(0deg)`;
+        
+        // make card flip
+        // character.style.transform = `rotateY(90deg)`;
         character.style.backgroundColor = 
         `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`
     }, 1000)
+}
+
+const car = {
+    x: 0,
+    y: 0,
+    direction: "left"
+}
+
+const carElement = document.getElementById("car");
+
+const handleCarGameStart = () => {
+    setInterval(() => {
+        carElement.style.left = `${car.x}px`;
+        carElement.style.top = `${car.y}px`;
+
+        car.x += 30;
+    }, 500)
 }

@@ -19,3 +19,18 @@ body {
 
     transition: all 1000ms;
 }
+
+#car {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 0;
+}
+
+.abs {
+    position: static;
+    width: 30px;
+    height: 30px;
+    top: 50px;
+    background-color: yellow;
+}
