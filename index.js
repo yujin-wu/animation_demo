@@ -22,3 +22,16 @@ const handleClearInterval = () => {
         clearInterval(handler);
     }
 }
+
+let secondsRemaining = 10;
+const timerDisplay = document.getElementById("time-heading");
+
+const handleTimerStart = () => {
+    const timerHandler = setInterval(() => {
+        if (secondsRemaining === 0) {
+            clearInterval(timerHandler);
+        }
+        timerDisplay.innerHTML = secondsRemaining;
+        secondsRemaining --;
+    }, 1000);    
+}
