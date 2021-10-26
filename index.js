@@ -35,3 +35,17 @@ const handleTimerStart = () => {
         secondsRemaining --;
     }, 1000);    
 }
+
+// ANIMATIONS ==============================
+
+const character = document.getElementById("character");
+
+const handleBoxAnimationStart = () => {
+    setInterval(() => {
+        character.style.left = `${Math.random() * 250}px`
+        character.style.top = `${Math.random() * 250}px`;
+        character.style.transform = `rotate(0deg)`;
+        character.style.backgroundColor = 
+        `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`
+    }, 1000)
+}

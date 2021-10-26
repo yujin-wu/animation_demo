@@ -1,3 +1,21 @@
 body {
     background-color: lightgray;
 }
+
+.container {
+    position: relative;
+    width: 300px;
+    aspect-ratio: 1;
+    background-color: white;
+}
+
+#character {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    left: 0;
+    top: 0;
+
+    transition: all 1000ms;
+}
